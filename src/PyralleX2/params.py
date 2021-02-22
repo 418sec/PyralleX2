@@ -75,7 +75,7 @@ def read_config(filename_in):
         "Error in params.read_config: File not found."
 
     with open(filename_in, 'r') as f:
-        params = yaml.load(f, Loader=yaml.FullLoader)
+        params = yaml.load(f, Loader=yaml.SafeLoader)
 
     return params
 
